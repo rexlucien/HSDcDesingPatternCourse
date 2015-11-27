@@ -210,6 +210,7 @@
     <Content Include="Views\Strategy\Index.cshtml" />
     <Content Include="Views\Visitor\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Builder\NewOvertime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

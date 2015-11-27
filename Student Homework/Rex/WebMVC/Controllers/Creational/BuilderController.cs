@@ -43,5 +43,14 @@ namespace WebMVC.Controllers.Creational
             expense = uco.Save(expense);
             return View("NewApplyExpense", expense);
         }
+
+        public ActionResult NewOvertime()
+        {
+            OvertimeBuilder builder = new OvertimeBuilder();
+            EOfficeDirector<OverTime> director = new EOfficeDirector<OverTime>();
+            OverTime form = director.Construct(builder);
+
+            return View("NewOvertime", form);
+        }
     }
 }

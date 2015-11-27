@@ -91,8 +91,15 @@
     <Compile Include="Creational\AbstractoryFactory\Participant.cs" />
     <Compile Include="Creational\AbstractoryFactory\WorkItem.cs" />
     <Compile Include="Creational\AbstractoryFactory\管理工作單Control.cs" />
+    <Compile Include="Creational\Builder\ApplyExpenseBuilder.cs" />
     <Compile Include="Creational\Builder\EOfficeBuilderPattern.cs" />
-    <Compile Include="Creational\Builder\SaveControl.cs" />
+    <Compile Include="Creational\Builder\LeaveBuilder.cs" />
+    <Compile Include="Creational\Builder\SaveApplyExpenseControl.cs" />
+    <Compile Include="DTO\Creational\Builder\ApplyExpense.cs" />
+    <Compile Include="DTO\Creational\Builder\ApplyExpenseDetail.cs" />
+    <Compile Include="DTO\Creational\Builder\OverTime.cs" />
+    <Compile Include="Creational\Builder\OvertimeBuilder.cs" />
+    <Compile Include="Creational\Builder\SaveLeaveControl.cs" />
     <Compile Include="Creational\FactoryMethod\ErpFactoryMethodPattern.cs" />
     <Compile Include="Creational\FactoryMethod\Singleton.cs" />
     <Compile Include="Creational\Prototype\RingleERP\MaintainPurchaseOrderControl.cs" />
@@ -108,8 +115,8 @@
     <Compile Include="DTO\Behavioral\TemplateMethod\TemplateMethodDto.cs" />
     <Compile Include="DTO\Creational\AbstractFactory\ParticipantFactoryEnum.cs" />
     <Compile Include="DTO\Creational\AbstractFactory\WorkItemDTO.cs" />
-    <Compile Include="DTO\Creational\Builder\BuilderDto.cs" />
-    <Compile Include="DTO\Creational\Builder\Interface.cs" />
+    <Compile Include="DTO\Creational\Builder\Leave.cs" />
+    <Compile Include="Creational\Builder\IOfficeFormBuilder.cs" />
     <Compile Include="DTO\Creational\FactoryMethod\FactoryMethodDto.cs" />
     <Compile Include="DTO\Creational\Prototype\RingleERP\Interface.cs" />
     <Compile Include="DTO\Creational\Prototype\RingleERP\PrototypeDto.cs" />
