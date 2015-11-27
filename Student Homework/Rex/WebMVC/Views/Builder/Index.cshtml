@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "辦公室自動化系統";
 }
 
@@ -9,6 +8,10 @@
 <br />
 <br />
 <button id="newApplyExpense">新增費用申請單</button>
+<br />
+<br />
+
+@Html.ActionLink("新增加班單", "NewOvertime", null, new { @class = "btn btn-default" })
 
 @section BodyScripts
 {
