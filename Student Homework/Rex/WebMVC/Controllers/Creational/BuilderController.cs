@@ -1,5 +1,6 @@
 ﻿using hsdc.dpt.Control.Creational.Builder;
 using hsdc.dpt.Control.DTO.Creational.Builder;
+using System;
 using System.Web.Mvc;
 
 namespace WebMVC.Controllers.Creational
@@ -51,6 +52,25 @@ namespace WebMVC.Controllers.Creational
             OverTime form = director.Construct(builder);
 
             return View("NewOvertime", form);
+        }
+
+        [HttpPost]
+        public ActionResult NewOvertime(OverTime model)
+        {
+            if (ModelState.IsValid == false) return View("NewOvertime", model);
+
+            SaveAOvertimeControl uco = new SaveAOvertimeControl();
+            model = uco.Save(model);
+            return View("NewOvertime", model);
+        }
+    }
+
+    public class SaveAOvertimeControl
+    {
+        public OverTime Save(OverTime model)
+        {
+            model.OverTimeId = $"LE{DateTime.Now.Ticks}";
+            return model;
         }
     }
 }
