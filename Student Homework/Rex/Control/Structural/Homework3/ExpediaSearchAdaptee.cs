@@ -1,8 +1,8 @@
-using System.Collections.Generic;
-using System.Linq;
 using hsdc.dpt.Control.DTO.Structual.Homework3;
 using hsdc.dpt.Control.DTO.Structual.Homework3.Expedia;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace hsdc.dpt.Control.Structural.Homework3
 {
@@ -18,7 +18,7 @@ namespace hsdc.dpt.Control.Structural.Homework3
             {
                 Name = x.retailHotelInfoModel.localizedHotelName,
                 Descript = x.retailHotelInfoModel.hotelDescription,
-                Price = (int)x.retailHotelPricingModel.price  ,
+                Price = (int)x.retailHotelPricingModel.price,
                 ThumbnailUrl = x.retailHotelInfoModel.largeThumbnailURL,
                 InfoSiteUrl = x.infositeUrl
             }).ToList();

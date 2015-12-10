@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using hsdc.dpt.Control.DTO.Structual.Homework3;
-using hsdc.dpt.Control.DTO.Structual.Homework3.Expedia;
-using Newtonsoft.Json;
+﻿using hsdc.dpt.Control.DTO.Structual.Homework3;
+using System.Collections.Generic;
 
 namespace hsdc.dpt.Control.Structural.Homework3
 {
@@ -9,11 +7,7 @@ namespace hsdc.dpt.Control.Structural.Homework3
     {
         public List<RestaurantDto> Get()
         {
-            string json = ExpediaSite.Instance.Responsed;
-
-            //var query = JsonConvert.DeserializeObject<ExpediaRootDto>(json);
-
-            //var result = JsonConvert.DeserializeObject<EztravelRootDto>(json);
+            // Need Parser Html 懶得寫了= =
 
             return new List<RestaurantDto>();
         }
