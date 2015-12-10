@@ -4,7 +4,7 @@ using hsdc.dpt.Control.DTO.Structual.Homework3;
 
 namespace hsdc.dpt.Control.Structural.Homework3
 {
-    internal class RestaurantDao
+    internal class RestaurantDao : IRestaurantDao
     {
         private readonly RestaurantContext _context;
 

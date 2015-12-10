@@ -150,7 +150,6 @@
     <Compile Include="Controllers\Behavioral\TemplateMethodController.cs" />
     <Compile Include="Controllers\Behavioral\VisitorController.cs" />
     <Compile Include="Controllers\Creational\AbstractFactoryController.cs" />
-    <Compile Include="Models\HotelJsonModel.cs" />
     <Compile Include="Controllers\Structural\Homework3Controller.cs" />
     <Compile Include="ViewModels\MapFactoryMethod\BingMapViewModel.cs" />
     <Compile Include="Controllers\Creational\FactoryMethodController.cs" />
@@ -228,6 +227,7 @@
     <Content Include="Views\Builder\NewOvertime.cshtml" />
     <Content Include="Views\MapFactoryMethod\Index.cshtml" />
     <Content Include="Views\Homework3\Index.cshtml" />
+    <None Include="Views\Homework3\Level.cshtml" />
     <None Include="Views\MapFactoryMethod\BingMap.cshtml" />
     <None Include="Views\MapFactoryMethod\GoogleMap.cshtml" />
     <None Include="Web.Debug.config">
@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Hubs\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Control\Control.csproj">

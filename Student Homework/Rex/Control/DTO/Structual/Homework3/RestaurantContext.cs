@@ -25,7 +25,6 @@ namespace hsdc.dpt.Control.DTO.Structual.Homework3
 
         private RestaurantContext()
         {
-            //25.06350	121.52225
             Restaurants = new List<Restaurant>
             {
                 new Restaurant {Name = "飯店01號",Descript = "描述一下" , Price =1100 },

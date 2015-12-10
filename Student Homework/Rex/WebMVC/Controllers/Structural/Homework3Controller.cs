@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using hsdc.dpt.Control.DTO.Structual.Homework3;
+using hsdc.dpt.Control.Structural.Homework3;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using hsdc.dpt.Control.DTO.Structual.Homework3;
-using hsdc.dpt.Control.Structural.Homework3;
 using WebMVC.ViewModels.Homework3;
 
 namespace WebMVC.Controllers.Structural
@@ -12,13 +12,29 @@ namespace WebMVC.Controllers.Structural
         // GET: Homework3
         public ActionResult Index()
         {
+            return View("Index");
+        }
+
+        public ActionResult Level1()
+        {
             RestaurantInquireUco uco = new RestaurantInquireUco();
 
             List<RestaurantDto> dtos = uco.GetPresetList();
 
             List<RestaurantViewModel> vms = ConvertToViewModel(dtos);
 
-            return View("Index", vms);
+            return View("Level", vms);
+        }
+
+        public ActionResult Level2()
+        {
+            RestaurantInquireUco uco = new RestaurantInquireUco(true);
+
+            List<RestaurantDto> dtos = uco.GetPresetList();
+
+            List<RestaurantViewModel> vms = ConvertToViewModel(dtos);
+
+            return View("Level", vms);
         }
 
         /// <summary>
@@ -31,7 +47,8 @@ namespace WebMVC.Controllers.Structural
             {
                 Name = x.Name,
                 Descript = x.Descript,
-                Price = x.Price
+                Price = x.Price,
+                ThumbnailUrl = x.ThumbnailUrl
             }).ToList();
         }
     }
