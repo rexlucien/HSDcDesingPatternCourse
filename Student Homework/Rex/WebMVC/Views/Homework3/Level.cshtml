@@ -35,25 +35,32 @@ foreach (var item in items)
 {
     <div class="col-sm-4 team-member-wrap">
         <div class="team-member">
-            <img src="@RenderImg(item.ThumbnailUrl)" class="img-responsive" alt="Member Image"/>
+            @RenderImg(item.ThumbnailUrl)
             <div class="team-details">
                 <div class="editContent">
                     <h4 class="member-name">@item.Name</h4>
                 </div>
-                <div class="editContent">
-                    <p class="position">@item.Price</p>
+                <div class="editContent" style="display: inline-flex">
+                    <span style="padding-right: 8px"><i class="fa  fa-money "></i></span>
+                    <span class="position">@item.Price</span>
+                    <span style="min-width: 200px"></span>
+                    <span><a href="@item.InfoSiteUrl" target="_blank"><i class="fa fa-info-circle"></i></a></span>
+                    
                 </div>
                 <div class="editContent">
                     <p>@item.Descript</p>
                 </div>
-                <ul class="social social-dark">
-                    <li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-pinterest"></i></a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-behance"></i></a></li>
-                    <li><a href="#"><i class="fa fa-2x fa-dribbble"></i></a></li>
-                </ul><!-- /.social -->
+
+                <div>
+                    <ul class="social social-dark">
+                        <li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-behance"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-dribbble"></i></a></li>
+                    </ul><!-- /.social -->
+                </div>
             </div>
         </div>
     </div>
@@ -63,11 +70,12 @@ foreach (var item in items)
 {
 if (string.IsNullOrWhiteSpace(url) == false)
 {
-        @:@url
-        return;
-    }
-    @:http://placehold.it/600x500
-
+        <img src="@url" class="img-responsive" alt="Member Image" />
+}
+else
+{
+        <img src="http://placehold.it/600x500" class="img-responsive" alt="Member Image" />
+}
 }
 
 @section Css{

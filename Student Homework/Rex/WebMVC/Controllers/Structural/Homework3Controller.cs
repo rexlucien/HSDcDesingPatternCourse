@@ -48,7 +48,8 @@ namespace WebMVC.Controllers.Structural
                 Name = x.Name,
                 Descript = x.Descript,
                 Price = x.Price,
-                ThumbnailUrl = x.ThumbnailUrl
+                ThumbnailUrl = x.ThumbnailUrl,
+                InfoSiteUrl = x.InfoSiteUrl
             }).ToList();
         }
     }

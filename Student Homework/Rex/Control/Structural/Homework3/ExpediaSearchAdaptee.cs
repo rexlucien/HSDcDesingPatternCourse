@@ -19,7 +19,8 @@ namespace hsdc.dpt.Control.Structural.Homework3
                 Name = x.retailHotelInfoModel.localizedHotelName,
                 Descript = x.retailHotelInfoModel.hotelDescription,
                 Price = (int)x.retailHotelPricingModel.price  ,
-                ThumbnailUrl = x.retailHotelInfoModel.largeThumbnailURL
+                ThumbnailUrl = x.retailHotelInfoModel.largeThumbnailURL,
+                InfoSiteUrl = x.infositeUrl
             }).ToList();
 
             return result;
