@@ -1,0 +1,62 @@
+﻿@using WebMVC.ViewModels.Homework3
+@model List<WebMVC.ViewModels.Homework3.RestaurantViewModel>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <h2>Homework 3</h2>
+        </div>
+        @RenderTable(@Model)
+    </div>
+</section>
+
+@helper RenderTable(List<RestaurantViewModel> items)
+{
+int i = 1;
+foreach (var item in items)
+{
+        @(i % 3 == 0 ? RenderTr(item) : RenderTd(item))
+    i++;
+}
+}
+
+@helper RenderTr(RestaurantViewModel item)
+{
+    <div class="row">
+        @RenderTd(item)
+    </div>
+}
+@helper RenderTd(RestaurantViewModel item)
+{
+    <div class="col-sm-4 team-member-wrap">
+        <div class="team-member">
+            <img src="http://placehold.it/600x500" class="img-responsive" alt="Member Image">
+            <div class="team-details">
+                <div class="editContent">
+                    <h4 class="member-name">@item.Name</h4>
+                </div>
+                <div class="editContent">
+                    <p class="position">@item.Price</p>
+                </div>
+                <div class="editContent">
+                    <p>@item.Descript</p>
+                </div>
+                <ul class="social social-dark">
+                    <li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-2x fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-2x fa-pinterest"></i></a></li>
+                    <li><a href="#"><i class="fa fa-2x fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fa fa-2x fa-dribbble"></i></a></li>
+                </ul><!-- /.social -->
+            </div>
+        </div>
+    </div>
+}
+
+@section Css{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="~/Content/Homework3/style.css" rel="stylesheet" />
+    <link href="~/Content/Homework3/flat-ui.css" rel="stylesheet" />
+    <link href="~/Content/Homework3/style.complete.css" rel="stylesheet" />
+}

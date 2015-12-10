@@ -167,6 +167,11 @@
       <DependentUpon>CodeModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Structural\Flyweight\FlyweightPattern.cs" />
+    <Compile Include="DTO\Structual\Homework3\Restaurant.cs" />
+    <Compile Include="DTO\Structual\Homework3\RestaurantContext.cs" />
+    <Compile Include="Structural\Homework3\RestaurantDao.cs" />
+    <Compile Include="DTO\Structual\Homework3\RestaurantDto.cs" />
+    <Compile Include="Structural\Homework3\RestaurantInquireUco.cs" />
     <Compile Include="Structural\Proxy\I龜庫接口.cs" />
     <Compile Include="Structural\Proxy\販售服務Control.cs" />
     <Compile Include="Structural\Proxy\龜庫Informer.cs" />
@@ -216,6 +221,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
