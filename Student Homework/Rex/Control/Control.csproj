@@ -129,6 +129,7 @@
     <Compile Include="DTO\Structual\Facade\烏龜商品.cs" />
     <Compile Include="DTO\Structual\Flyweight\FlyweightDto.cs" />
     <Compile Include="DTO\Structual\Flyweight\Interface.cs" />
+    <Compile Include="DTO\Structual\Homework3\ExpediaSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structural\Adapter\Get存貨Adapter.cs" />
     <Compile Include="Structural\Adapter\IGet存貨資訊.cs" />
