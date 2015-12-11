@@ -1,5 +1,5 @@
 ﻿@using WebMVC.ViewModels.Homework3
-@model List<WebMVC.ViewModels.Homework3.RestaurantViewModel>
+@model List<RestaurantViewModel>
 
 <section>
     <div class="container">
@@ -31,6 +31,7 @@ foreach (var item in items)
         @RenderTd(item)
     </div>
 }
+
 @helper RenderTd(RestaurantViewModel item)
 {
     <div class="col-sm-4 team-member-wrap">
@@ -45,7 +46,6 @@ foreach (var item in items)
                     <span class="position">@item.Price</span>
                     <span style="min-width: 200px"></span>
                     <span><a href="@item.InfoSiteUrl" target="_blank"><i class="fa fa-info-circle"></i></a></span>
-                    
                 </div>
                 <div class="editContent">
                     <p>@item.Descript</p>

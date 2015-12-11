@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using hsdc.dpt.Control.DTO.Structual.Homework3;
+using System.Collections.Generic;
 using System.Linq;
-using hsdc.dpt.Control.DTO.Structual.Homework3;
 
 namespace hsdc.dpt.Control.Structural.Homework3
 {

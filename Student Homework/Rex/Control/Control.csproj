@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="DTO\Structual\Homework3\Expedia\Expedia.json" />
     <None Include="packages.config" />
     <None Include="Structural\Flyweight\Dao\CodeModel.Context.tt">
