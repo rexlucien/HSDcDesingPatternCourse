@@ -1,4 +1,5 @@
 ﻿using hsdc.dpt.Control.DTO.Structual.Homework3;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -36,15 +37,15 @@ namespace hsdc.dpt.Control.Structural.Homework3
 
             ConcurrentBag<RestaurantDto> external = new ConcurrentBag<RestaurantDto>();
 
-            Parallel.ForEach(_adapters, (adapter) =>
-            {
-                var query = adapter.Get();
+            Parallel.ForEach(_adapters, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, adapter =>
+             {
+                 var query = adapter.Get();
 
-                foreach (var restaurantDto in query)
-                {
-                    external.Add(restaurantDto);
-                }
-            });
+                 foreach (var restaurantDto in query)
+                 {
+                     external.Add(restaurantDto);
+                 }
+             });
 
             result.InsertRange(0, external);
 

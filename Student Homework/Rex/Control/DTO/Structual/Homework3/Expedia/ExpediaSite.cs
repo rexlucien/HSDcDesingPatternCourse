@@ -1,8 +1,10 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 [assembly: InternalsVisibleTo("Control.Tests")]
-[assembly:InternalsVisibleTo("WebMVC.Tests")]
-namespace hsdc.dpt.Control.DTO.Structual.Homework3
+[assembly: InternalsVisibleTo("WebMVC.Tests")]
+
+namespace hsdc.dpt.Control.DTO.Structual.Homework3.Expedia
 {
     public class ExpediaSite
     {
@@ -31,5 +33,7 @@ namespace hsdc.dpt.Control.DTO.Structual.Homework3
         }
 
         public string Responsed { get; set; }
+
+        public Task<string> ResponsedAsync { get; set; }
     }
 }
